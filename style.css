@@ -1,6 +1,8 @@
+/*This will make the background of the page into the colour I want, and the width will auto-adjust*/
 body {
-    width: 300px;
+    max-width: auto;
     margin: auto;
     background-color: #9fcffa;
-    padding: 60px 60px 200px 60px;
   }
+
+
