@@ -1,5 +1,6 @@
 /*This will make the background of the page into the colour I want, and the width will auto-adjust*/
 body {
+    text-align: center;
     max-width: auto;
     margin: auto;
     background-color: #9fcffa;
