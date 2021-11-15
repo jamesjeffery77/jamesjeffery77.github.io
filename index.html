@@ -30,106 +30,115 @@
 
 <body>
 
-<h1> Data Science Portfolio - James Jeffery </h1>
+    <h1> Data Science Portfolio - James Jeffery </h1>
 
-<div class = "wrap">
-<h3 class = "rubric-launch"> Please find my project <a class="textlink" href="project"> here</a>.</h3>
-</div>
+    <div class = "wrap">
+    <h3 class = "rubric-launch"> Please find my project <a class="textlink" href="project"> here</a>.</h3>
+    </div>
+        
     
- 
-<h2> Week 1  </h2>
-<div class="container">
-  <h4> In class task </h4>
-  <!--Chart 1 using my data (homework 1)-->
-  <div class="chart" id="chart1">
-    <script>
-      var myChart1 = "chart1_covidUKRegions.json";
-      vegaEmbed('#chart1', myChart1);
-    </script>
-  </div>
-
-
-  <h4> Homework pt.1 </h4>
-  <!--Chart 2 using other data (homework 1)-->
-  <div class="chart" id="chart2">
-      <script>
-        var myChart2 = "chartcrypto1.json";
-        vegaEmbed('#chart2', myChart2);
-      </script>
-  </div>
-  
-  
-    <h4> Homework pt.2 </h4>
-    <!--Chart 3 using other data (homework 1) -->
-    <div class="chart" id="chart3">
+    <h2> Week 1  </h2>
+    <div class="container">
+    <h4> In class task </h4>
+    <!--Chart_1 - Data was used from example in class-->
+    <div class="chart" id="chart1">
         <script>
-          var myChart3 = "chartENV11.json";
-          vegaEmbed('#chart3', myChart3);
+        var myChart1 = "chart1_covidUKRegions.json";
+        vegaEmbed('#chart1', myChart1);
         </script>
     </div>
-  
-  </div>
-  
-  
-<h3> Week 2 - Homework pt.1 </h3>
-<p> This data was downloaded using an API, so the graph is real time </p>
-<!--Chart 4 using an API to get data (homework 2)-->
-<div class="chart" id="chart4">
-    <script>
-      var myChart4 = "covidCasesByRegion.json";
-      vegaEmbed('#chart4', myChart4);
-    </script>
-</div>
 
-<h3> Week 2 - Homework pt.2 </h3>
-<p> This is raw data which is hosted on my github repository, so the graph is not in real time </p>
-<!--Chart 5 using raw data (homework 2)-->
-<div class="chart" id="chart5">
-    <script>
-      var myChart5 = "covidDeathsByRegion.json";
-      vegaEmbed('#chart5', myChart5);
-    </script>
-</div>
 
-<h3> Week 3 - Homework pt.1 </h3>
-<p> This is data which I have downloaded from Richards github, renamed to be mine, added a data point at the bottom, then added back into my Github </p>
-<!--Chart 6 changing CSV data (homework 3)-->
-<div class="chart" id="chart6">
-    <script>
-      var myChart6 = "myEnvironmentChart.json";
-      vegaEmbed('#chart6', myChart6);
-    </script>
-</div>
+    <h4> Homework pt.1 </h4>
+    <!--Chart_2 - I downloaded the chart from Richard's repository, and downloaded it onto my page-->
+    <div class="chart" id="chart2">
+        <script>
+            var myChart2 = "chartcrypto1.json";
+            vegaEmbed('#chart2', myChart2);
+        </script>
+    </div>
+    
+    
+    <h4> Homework pt.2 </h4>
+    <!--Chart_3 - I downloaded the chart from Richard's repository, and downloaded it onto my page-->
+    <div class="chart" id="chart3">
+        <script>
+            var myChart3 = "chartENV11.json";
+            vegaEmbed('#chart3', myChart3);
+        </script>
+    </div>
+    
+    </div>
+    
+    
+    <h2> Week 2 </h2>
+    <div class="container">
+        <h4> Homework pt. 1 </h4>
+        <!--Chart_4 - This chart uses an API to get data-->
+        <div class="chart" id="chart4">
+            <script>
+                var myChart4 = "covidCasesByRegion.json";
+                vegaEmbed('#chart4', myChart4);
+            </script>
+        </div>
 
-<h3> Week 3 - Homework pt.2 </h3>
-<p> I downloaded the json file from Richards github, then added the raw csv data straight onto it </p>
-<!--Chart 7 inputting JSON data manually (homework 3)-->
-<div class="chart" id="chart7">
-    <script>
-      var myChart7 = "myEndangeredSpeciesData.json";
-      vegaEmbed('#chart7', myChart7);
-    </script>
-</div>
- 
-<h3> Week 4 - Homework pt.1 </h3>
-<p> This is an API I have found </p>
-<!--Chart 8 using API I have found (homework 4)-->
-<div class="chart" id="chart8">
-    <script>
-      var myChart8 = "OzoneAPI_Week4.json";
-      vegaEmbed('#chart8', myChart8);
-    </script>
-</div>
-  
-<h3> Week 4 - Homework pt.2 </h3>
-<p> This is an API I have found </p>
-<!--Chart 9 using API I have found (homework 4)-->
-<div class="chart" id="chart9">
-    <script>
-      var myChart9 = "IBMAPI_Week4.json";
-      vegaEmbed('#chart9', myChart9);
-    </script>
-</div>
+        <h4> Homework pt.2 </h4>
+        <!--Chart_5 - This chart uses raw data-->
+        <div class="chart" id="chart5">
+            <script>
+                var myChart5 = "covidDeathsByRegion.json";
+                vegaEmbed('#chart5', myChart5);
+            </script>
+        </div>
+    </div>
+
+
+    <h2> Week 3 </h2>
+    <div class="container">
+        <h4> Homework pt.1 </h4>
+        <!--Chart_6 - I have changed the underlying CSV data-->
+        <!--I downloaded the data from Richard's github, renamed it to be mine, added a data point to the bottom, and then uploaded it back onto my github-->
+        <div class="chart" id="chart6">
+            <script>
+                var myChart6 = "myEnvironmentChart.json";
+                vegaEmbed('#chart6', myChart6);
+            </script>
+        </div>
+
+        <h4> Homework pt.2 </h4>
+        <!--Chart 7 inputting JSON data manually (homework 3)-->
+        <!--I downloaded the json file from Richard's github, and then added the raw csv data straight onto it-->
+        <div class="chart" id="chart7">
+            <script>
+                var myChart7 = "myEndangeredSpeciesData.json";
+                vegaEmbed('#chart7', myChart7);
+            </script>
+        </div>
+    </div>
+
+
+    <h2> Week 4 </h2>
+    <div class="container">
+        <h4>Homework pt.1 </h4>
+        <!--Chart 8 using API I have found (homework 4)-->
+        <div class="chart" id="chart8">
+            <script>
+                var myChart8 = "OzoneAPI_Week4.json";
+                vegaEmbed('#chart8', myChart8);
+            </script>
+        </div>
+        
+        <h3> Week 4 - Homework pt.2 </h3>
+        <p> This is an API I have found </p>
+        <!--Chart 9 using API I have found (homework 4)-->
+        <div class="chart" id="chart9">
+            <script>
+                var myChart9 = "IBMAPI_Week4.json";
+                vegaEmbed('#chart9', myChart9);
+            </script>
+        </div>
+    </div>
+
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
 
