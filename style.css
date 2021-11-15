@@ -3,16 +3,29 @@ body {
     text-align: center;
     max-width: auto;
     margin: auto;
-    background-color: #16537e;
+    background-color: #6497b1;
   }
 
 .container {
-    border: #99aab5 solid 5px;
+    border: #b3cde0 solid 5px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    width: 400px;
+    height: 390px;
+    margin: 10px;
+    padding: 5px;
+    background-color: White;
+    border: #2a9d8f solid 5px;
+    border-radius: 10px;
+    font-size: 10pxp;
+}
 
 
