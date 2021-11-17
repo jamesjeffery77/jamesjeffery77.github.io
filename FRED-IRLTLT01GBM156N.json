@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "title": {
+    "text": "UK Long-Term Government Bond Yields: 10-year",
+    "subtitle":"Percent, Not Seasonally Adjusted, Source: FRED",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+   "data": {
+    "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/data_FRED-IRLTLT01GBM156N.json",
+    "format":{
+      "property": "observations"
+    }
+  },
+
+
+  "height": 300,
+  "width": 320,
+   
+  "mark": {"type": "line", 
+  "point": false,
+  "clip": true,
+  "color": "lightblue"
+  },
+ 
+  "encoding": {
+
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": false},
+      "scale": {"domain": [0,20]}
+    }
+}
+}
