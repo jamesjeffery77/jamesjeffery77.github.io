@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Internet Sales",
+  "title": {
+
+    "text": "Internet Sales as a Percentage of Total Retail Sales",
+
+    "subtitle": "(%) Source: ONS.",
+
+    "subtitleFontStyle":"italic",
+
+    "subtitleFontSize":10,
+
+    "anchor": "start",
+
+    "color": "black"
+ },
+
+  "data": {"url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main//week8_InternetSales.csv"},
+  "mark":{
+
+ 
+
+      "type": "line",
+
+      "color": "#86d0bb",
+
+      "strokeWidth":2,
+
+      "opacity":1
+
+ 
+
+    },
+  "height": 300,
+  "width": 300,
+
+  "encoding": {
+    "y": {"field": "Internet sales as a percentage of total retail sales (ratio) (%)", "type": "quantitative", "title": null},
+
+
+
+
+    "x": {"field": "Title", "type": "temporal", "timeUnit":"yearmonth", "title": null, "scale":"xscale"},
+
+        "tooltip": [
+
+      {"field": "Title", "type": "Temporal", "title": "Date"},
+      {"field": "Internet sales as a percentage of total retail sales (ratio) (%)", "type": "nominal", "title": "Internet sales as a percentage of total retail sales (%)"}
+   
+
+    ]
+
+ 
+
+    }
+
+
+}
