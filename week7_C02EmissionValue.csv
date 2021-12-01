@@ -1,0 +1,10 @@
+Column1,Technology,Description,CO2 Emission Value
+0,Hydroelectric,reservoir,4
+1,Wind,onshore,12
+2,Nuclear,various generation II reactor types,16
+4,Solar thermal,parabolic trough,22
+5,Geothermal,hot dry rock,45
+6,Solar PV,Polycrystalline silicon,46
+3,Biomass,various,230
+7,Natural gas,various combined cycle turbines without scrubbing,469
+8,Coal,various generator types without scrubbing,1001
