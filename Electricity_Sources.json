@@ -1,0 +1,71 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "This chart shows the change in the main components of electricity in the UK",
+
+"title": {
+    "text": "UK Electricity Sources, 1985 - 2020 (%)",
+    "subtitle":"Total percentage by fuel source, Source: ourworldindata.org",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/electricity_percentages.csv"
+  },
+  "height": 300,
+  "width": 300,
+  "mark": "line",
+    "selection": {
+    "Type": {
+      "type": "single",
+      "fields": ["Type"],
+      "bind":{
+        "input":"select",
+        "options": [
+          null, 
+          "Coal ",
+          "Gas ",
+          "Hydro ",
+          "Solar ",
+          "Wind ",
+          "Oil ",
+          "Nuclear ",
+          "Other renewables "
+        ],
+        "name" : "Pick fuel type"
+      }
+    }
+  },
+  
+  "transform": [
+
+    {"filter": {"selection": "Type"}}   
+    
+  ],
+
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "title": "", "axis": {"grid": false}},
+    "y": {
+      "field": "%",
+      "type": "quantitative",
+      "scale": {"domain": [0, 70]},
+      "title": "",
+      "axis": {"grid": false},
+      "sort": []
+    },
+    "color": {
+      "field": "Type",
+      "title": null,
+      "type": "nominal",
+      "sort": [],
+      "scale": {"scheme": "darkgreen"}
+    },
+    "tooltip": [
+      {"field": "Year", "type": "temporal", "timeUnit": "year", "title": "Year"},
+      {"field": "%", "type": "quantitative", "title": "% which contributes"},
+      {"field": "Type", "type": "nominal", "title" : "Fuel Type"}
+    ]
+  }
+}
