@@ -58,6 +58,9 @@
     "color": {
       "field": "Type",
       "title": null,
+        "legend": {
+        "orient": "top-right",
+        "columns":2},
       "type": "nominal",
       "sort": [],
       "scale": {"scheme": "darkgreen"}
