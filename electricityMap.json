@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson",
+    "format": {"type": "topojson", "feature": "europe"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com//jamesjeffery77/jamesjeffery77.github.io/main/share_electricity_low_carbon.csv"
+        },
+        "key": "Country",
+        "fields": ["%"]
+      }
+    }
+  ],
+  "projection": {"type": "naturalEarth1"},
+  "mark": "geoshape",
+  "encoding": {
+    "color": {
+      "field": "%", 
+      "type": "quantitative"},
+    "tooltip": [
+      {"field": "Country", "type": "ordinal"},
+      {"field": "%", "type": "quantitative"}
+    ]
+  }
+}
