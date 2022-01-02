@@ -19,6 +19,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 </style>
 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+</style>
   
 </head>
 
@@ -30,41 +33,43 @@
 
 <body>
 
-    <h1> Data Science Portfolio - James Jeffery </h1>
-
-    <div class = "wrap">
-    <h3 class = "rubric-launch"> Please find my project <a class="textlink" href="project"> here</a>.</h3>
-    <h3 class = "rubric-launch"> Please find my project <a class="textlink" href="portfolio"> here</a>.</h3>
+    <div class="container">
+        <h2><span style="color:rgb(255, 255, 255)">Data</span><span style="color:rgb(31, 210, 255)">Science</span></h2>
     </div>
-        
-    <h2> Week 1 - Embedding Charts </h2>
+
+    <div class="containerHomeScreen">
+        <button class="button4" onclick="window.location.href = 'project'">Project</button>
+        <button class="button5" onclick="location.href = 'https://github.com/jamesjeffery77/jamesjeffery77.github.io'">GitHub</button>
+    </div>
+    
     <!-- This task involved embedding three charts onto my webpage, two of which were given in class,
-    the third was taken from the rapidcharts.io repository-->
+    the third was taken from the rapidcharts.io repository-->    
+    <h3> Week 1 - Embedding Charts </h3>
     
     <div class="container">
     <!--chart1 - Data was used from example in class-->
-    <div class="chart" id="chart1">
-        <script>
-        var myChart1 = "week1/CovidCasesUKRegions.json";
-        vegaEmbed('#chart1', myChart1);
-        </script>
-    </div>
+        <div class="chart" id="chart1">
+            <script>
+            var myChart1 = "week1/CovidCasesUKRegions.json";
+            vegaEmbed('#chart1', myChart1);
+            </script>
+        </div>
 
-    <!--chart2 - Data was used from example in class-->
-    <div class="chart" id="chart2">
-        <script>
-            var myChart2 = "week1/UKProductivity.json";
-            vegaEmbed('#chart2', myChart2);
-        </script>
-    </div>
-    
-    <!--chart3 - I downloaded the chart from Richard's repository, and downloaded it onto my page-->
-    <div class="chart" id="chart3">
-        <script>
-            var myChart3 = "week1/Innovation.json";
-            vegaEmbed('#chart3', myChart3);
-        </script>
-    </div>
+        <!--chart2 - Data was used from example in class-->
+        <div class="chart" id="chart2">
+            <script>
+                var myChart2 = "week1/UKProductivity.json";
+                vegaEmbed('#chart2', myChart2);
+            </script>
+        </div>
+        
+        <!--chart3 - I downloaded the chart from Richard's repository, and downloaded it onto my page-->
+        <div class="chart" id="chart3">
+            <script>
+                var myChart3 = "week1/Innovation.json";
+                vegaEmbed('#chart3', myChart3);
+            </script>
+        </div>
     
     </div>
     
@@ -215,4 +220,3 @@
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
 
 </html>
-
