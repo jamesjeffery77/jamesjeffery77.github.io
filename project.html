@@ -5,6 +5,13 @@
 
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
+<!DOCTYPE html>
+
+<!-- Richard Davies, Data Science 2021 -->
+
+
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
 <head>
 <!--The next three lines allow the Vega embed-->
 <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
@@ -19,6 +26,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 </style>
 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+</style>
   
 </head>
 
@@ -30,11 +40,72 @@
 
 <body>
 
-<h1> Data Science Project - James Jeffery </h1>
-  
-<h3> This webpage will have my project on it </h3>
- 
+    <div class="container">
+        <h2><span style="color:rgb(255, 255, 255)">Data</span><span style="color:rgb(31, 210, 255)">Science</span></h2>
+    </div>
 
+    <div class="containerHomeScreen">
+        <button class="button4" onclick="window.location.href = 'portfolio'">Portfolio</button>
+        <button class="button5" onclick="location.href = 'https://github.com/jamesjeffery77/jamesjeffery77.github.io'">GitHub</button>
+    </div>
+
+    <h4> Chart 1 - How bad is each energy source?</h4>
+    <div class="container">
+        
+        <!--chart1 - data was scraped from wikipedia-->
+        <div class="chart" id="chart1">
+            <script>
+                var myChart1 = "week7/CO2EmissionValue.json";
+                vegaEmbed('#chart1', myChart1);
+            </script>
+        </div>
+    </div>
+
+    <p> This chart shows CO2 emissions per unit of electricity.
+         Clearly, there is an incentive to pursue policies that reduces the use of carbon intensive electricity sources</p>
+
+    <h4> Chart 2 - How have UK electricity sources changed over time?  </h4>
+    <div class="container">
+        <!--chart2 - data found from worldindata.org-->
+        <div class="chart" id="chart2">
+            <script>
+                var myChart2 = "Electricity_Sources.json";
+                vegaEmbed('#chart2', myChart2);
+            </script>
+        </div>
+    </div>
+
+    <p> We can see a significant shift in the sources of electricity in the UK from 1985.
+         In 1985, x% was generated using non-renewable, currently, it is 59.3% </p>
+
+    <h4> Chart 3 - How do the UK's electricity sources compare to the rest of the world? </h4>
+    <div class="container">
+      <!--chart3 - data found from worldindata.org-->
+        <div class="chart" id="chart3">
+            <script>
+                var myChart3 = "world_map_slider.json";
+                vegaEmbed('#chart3', myChart3);
+            </script>
+        </div>
+    </div>
+
+    <p> This map illustrates a global trend towards more sustainable electricity sources.
+        Sub-saharan Africa and South America has remained fairly constantly reliant on renewable energy sources for
+    its electricity, whilst Europe and Asia have made significant progress since 1985</p>
+
+    <h4> Chart 4 - Is there any correlation between more sustainable electricity and CO2 emissions per capita? </h4>
+    <div class="container">
+        <!--chart4 - regression was performed in python, data sourced from the World Bank and OurWorldInData-->
+        <div class="chart" id="chart4">
+            <script>
+                var myChart4 = "co2_carbonintensity_regression.json";
+                vegaEmbed('#chart4', myChart4);
+            </script>
+        </div>
+    </div>
+
+    <p> There seems to be little correlation between having a high amount of electricity generated from renewable sources
+        and CO2 emissions per capita. This is probably because of Africa. </p>
 
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
