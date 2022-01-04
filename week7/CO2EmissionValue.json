@@ -5,7 +5,7 @@
 
     "text": "50th Percentile CO2 Emission Value",
 
-    "subtitle": "CO2 emissions per unit of electricity generated (%). Source: Wikipedia.",
+    "subtitle": "CO2 emissions per unit of electricity generated (KWH). Source: Wikipedia.",
 
     "subtitleFontStyle":"italic",
 
