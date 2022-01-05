@@ -1,0 +1,93 @@
+type,emissions,Year
+projection,0,1985
+projection,0.047075217,1986
+projection,0.205928537,1987
+projection,-0.021759052,1988
+projection,-0.419404472,1989
+projection,-0.180123161,1990
+projection,-0.65944706,1991
+projection,-0.938383738,1992
+projection,-0.572452185,1993
+projection,-0.15207228,1994
+projection,0.496756056,1995
+projection,-0.856063653,1996
+projection,1.208082476,1997
+projection,0.88187356,1998
+projection,1.299525188,1999
+projection,0.538559946,2000
+projection,0.365914495,2001
+projection,1.071325174,2002
+projection,0.613647082,2003
+projection,0.454704331,2004
+projection,0.863870002,2005
+projection,0.672182968,2006
+projection,-0.367504143,2007
+projection,-1.686406315,2008
+projection,4.235281373,2009
+projection,1.626083493,2010
+projection,10.53171797,2011
+projection,13.02190843,2012
+projection,20.43553018,2013
+projection,32.99625508,2014
+projection,52.77696934,2015
+projection,60.00106823,2016
+projection,75.53903775,2017
+projection,85.25009869,2018
+difference,7.116837992,1995
+difference,-11.76858037,1996
+difference,13.50403804,1997
+difference,10.1534969,1998
+difference,18.30051321,1999
+difference,14.58091288,2000
+difference,8.270331123,2001
+difference,26.31300686,2002
+difference,18.04646312,2003
+difference,19.87787279,2004
+difference,26.9908543,2005
+difference,33.66745488,2006
+difference,47.91122379,2007
+difference,68.96265298,2008
+difference,117.9655797,2009
+difference,107.7758315,2010
+difference,146.249204,2011
+difference,129.8512303,2012
+difference,136.5317827,2013
+difference,167.6772027,2014
+difference,169.1757258,2015
+difference,190.279082,2016
+difference,190.3933317,2017
+difference,190.270454,2018
+co2_actual, 559.63 ,1985
+co2_actual, 568.55 ,1986
+co2_actual, 571.67 ,1987
+co2_actual, 570.29 ,1988
+co2_actual, 581.58 ,1989
+co2_actual, 600.34 ,1990
+co2_actual, 608.43 ,1991
+co2_actual, 592.88 ,1992
+co2_actual, 578.64 ,1993
+co2_actual, 574.64 ,1994
+co2_actual, 566.57 ,1995
+co2_actual, 588.19 ,1996
+co2_actual, 562.33 ,1997
+co2_actual, 567.60 ,1998
+co2_actual, 561.11 ,1999
+co2_actual, 567.59 ,2000
+co2_actual, 576.31 ,2001
+co2_actual, 560.07 ,2002
+co2_actual, 571.47 ,2003
+co2_actual, 572.90 ,2004
+co2_actual, 569.96 ,2005
+co2_actual, 567.57 ,2006
+co2_actual, 559.24 ,2007
+co2_actual, 544.50 ,2008
+co2_actual, 493.89 ,2009
+co2_actual, 511.63 ,2010
+co2_actual, 469.45 ,2011
+co2_actual, 487.52 ,2012
+co2_actual, 477.39 ,2013
+co2_actual, 438.54 ,2014
+co2_actual, 422.34 ,2015
+co2_actual, 399.34 ,2016
+co2_actual, 387.57 ,2017
+co2_actual, 381.89 ,2018
