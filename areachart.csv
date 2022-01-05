@@ -1,0 +1,103 @@
+year,type,emissions
+1985,co2_projection, 559.63 
+1986,co2_projection, 568.55 
+1987,co2_projection, 571.67 
+1988,co2_projection, 570.29 
+1989,co2_projection, 581.58 
+1990,co2_projection, 600.34 
+1991,co2_projection, 608.43 
+1992,co2_projection, 592.88 
+1993,co2_projection, 578.64 
+1994,co2_projection, 574.64 
+1995,co2_projection, 566.57 
+1996,co2_projection, 588.19 
+1997,co2_projection, 562.33 
+1998,co2_projection, 567.60 
+1999,co2_projection, 561.11 
+2000,co2_projection, 567.59 
+2001,co2_projection, 576.31 
+2002,co2_projection, 560.07 
+2003,co2_projection, 571.47 
+2004,co2_projection, 572.90 
+2005,co2_projection, 569.96 
+2006,co2_projection, 567.57 
+2007,co2_projection, 559.24 
+2008,co2_projection, 544.50 
+2009,co2_projection, 493.89 
+2010,co2_projection, 511.63 
+2011,co2_projection, 469.45 
+2012,co2_projection, 487.52 
+2013,co2_projection, 477.39 
+2014,co2_projection, 438.54 
+2015,co2_projection, 422.34 
+2016,co2_projection, 399.34 
+2017,co2_projection, 387.57 
+2018,co2_projection, 381.89 
+1985,difference,559.627325
+1986,difference,560.8567629
+1987,difference,561.8952592
+1988,difference,563.2312372
+1989,difference,565.2121548
+1990,difference,566.5709888
+1991,difference,569.0412774
+1992,difference,570.7629708
+1993,difference,571.6775106
+1994,difference,572.7236365
+1995,difference,573.684798
+1996,difference,576.4190226
+1997,difference,575.837215
+1998,difference,577.7536229
+1999,difference,579.4090682
+2000,difference,582.1659459
+2001,difference,584.5838691
+2002,difference,586.3790389
+2003,difference,589.5183841
+2004,difference,592.7815298
+2005,difference,596.9529683
+2006,difference,601.2393929
+2007,difference,607.1476418
+2008,difference,613.460778
+2009,difference,611.8604337
+2010,difference,619.4074615
+2011,difference,615.702876
+2012,difference,617.3677853
+2013,difference,613.9192707
+2014,difference,606.2182017
+2015,difference,591.5158328
+2016,difference,589.616476
+2017,difference,577.9585127
+2018,difference,572.160113
+1985,co2_projection,559.627325
+1986,co2_projection, 560.90 
+1987,co2_projection, 562.10 
+1988,co2_projection, 563.21 
+1989,co2_projection, 564.79 
+1990,co2_projection, 566.39 
+1991,co2_projection, 568.38 
+1992,co2_projection, 569.82 
+1993,co2_projection, 571.11 
+1994,co2_projection, 572.57 
+1995,co2_projection, 574.18 
+1996,co2_projection, 575.56 
+1997,co2_projection, 577.05 
+1998,co2_projection, 578.64 
+1999,co2_projection, 580.71 
+2000,co2_projection, 582.70 
+2001,co2_projection, 584.95 
+2002,co2_projection, 587.45 
+2003,co2_projection, 590.13 
+2004,co2_projection, 593.24 
+2005,co2_projection, 597.82 
+2006,co2_projection, 601.91 
+2007,co2_projection, 606.78 
+2008,co2_projection, 611.77 
+2009,co2_projection, 616.10 
+2010,co2_projection, 621.03 
+2011,co2_projection, 626.23 
+2012,co2_projection, 630.39 
+2013,co2_projection, 634.35 
+2014,co2_projection, 639.21 
+2015,co2_projection, 644.29 
+2016,co2_projection, 649.62 
+2017,co2_projection, 653.50 
+2018,co2_projection, 657.41 
