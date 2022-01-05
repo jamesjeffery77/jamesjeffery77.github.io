@@ -93,7 +93,7 @@
         Sub-saharan Africa and South America has remained fairly constantly reliant on renewable energy sources for
     its electricity, whilst Europe and Asia have made significant progress since 1985</p>
 
-    <h4> Chart 4 - Is there any correlation between more sustainable electricity and CO2 emissions per capita? </h4>
+    <h4> Chart 4 - Is there any correlation between more sustainable electricity and CO2 emissions per capita in the world? </h4>
     <div class="container">
         <!--chart4 - regression was performed in python, data sourced from the World Bank and OurWorldInData-->
         <div class="chart" id="chart4">
@@ -107,6 +107,23 @@
     <p> There seems to be little correlation between having a high amount of electricity generated from renewable sources
         and CO2 emissions per capita. This is probably because of Africa. </p>
 
+    <h4> Chart 5 - Is there any correlation between more sustainable electricity and CO2 emissions per capita in the UK? </h4>
+    <div class="container">
+        <!--chart5 - regression was performed in python, data sourced from the World Bank and OurWorldInData-->
+        <div class="chart" id="chart5">
+            <script>
+                var myChart5 = "UK_regression.json";
+                vegaEmbed('#chart5', myChart5);
+            </script>
+        </div>
+    </div>
+
+    <p> Unsurprisingly, in the Uk, an increase in the percentage of 
+    electricity generated from renewable sources is correlated with a reduction in CO2
+      emissions per capita. </p>
+
+    
+    
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
 
