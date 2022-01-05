@@ -52,8 +52,8 @@
     {
       "data": {
         "values": [
-          {"percentage": 0, "co2": 12.5},
-          {"percentage": 89.29, "co2": 0}
+          {"percentage": 0, "co2": 14.1},
+          {"percentage": 72.07, "co2": 0}
         ]
       },
       "mark": {"type": "line", "color": "#1FD2FF", "clip": true},
