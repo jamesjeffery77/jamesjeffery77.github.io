@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/cleanelectricityeffect_redo.csv"},
+  "width": 300,
+  "height": 300,
+  "encoding": {"x": {"field": "year", "type": "temporal"}},
+  "layer": [
+    {
+      "encoding": {
+        "color": {"field": "type", "type": "nominal"},
+        "y": {"field": "emissions", "type": "quantitative",
+        "scale": {"domain":[300,700]}
+        }
+      },
+      "layer": [
+        {"mark": "line"},
+        {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+      ]
+    },
+    {
+      "transform": [{"pivot": "type", "value": "emissions", "groupby": ["year"]}],
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": {"value": 0.3, "param": "hover", "empty": false},
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "co2_emissions", "type": "quantitative"},
+          {"field": "co2_projection", "type": "quantitative"}
+        ]
+      },
+      "params": [{
+        "name": "hover",
+        "select": {
+          "type": "point",
+          "fields": ["year"],
+          "nearest": true,
+          "on": "mouseover",
+          "clear": "mouseout"
+        }
+      }]
+    }
+  ]
+}
