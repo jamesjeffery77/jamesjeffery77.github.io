@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "This is a regression of the percentage of electricity generated from renewable energy on CO2 emissions per capita in the UK from 1985 - 2018. I chose to stop at 2018 because this was before Covid, which I feel might have influenced the results due to lower emissions in general. I performed the regression in python to determine the equaition of the regression line",
+  "title": {
+    "text": [
+      "Regression of carbon intensity of electricity on CO2 ",
+      "emissions per capita the UK from 1985 to 2018"
+    ],
+    "subtitle": [
+      "Sources: Our World in Data (carbon intensity), The World Bank ",
+      "(co2 emissions per capita)"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/UK_regression.csv",
+    "format": {"type": "csv"}
+  },
+  "background": "#ffffff",
+  "config": {"axis": {"grid": true}},
+  "height": 250,
+  "width": 300,
+  "encoding": {
+    "x": {
+      "field": "percentage",
+      "type": "quantitative",
+      "title": "Percentage of electricity generated from renewable sources",
+      "axis": {"grid": true},
+      "scale": {"domain": [15, 55]}
+    },
+    "y": {
+      "field": "co2",
+      "type": "quantitative",
+      "title": "CO2 emissions per capita",
+      "axis": {"grid": true},
+      "scale": {"domain": [4, 11]}
+    },
+    "tooltip": [
+      {"field": "year", "type": "temporal", "title": "Year"},
+      {"field": "percentage", "type": "quantitative", "title": "Percentage"},
+      {
+        "field": "co2",
+        "type": "quantitative",
+        "title": "CO2 emissions per capita"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {"percentage": 0, "co2": 12.5},
+          {"percentage": 89.29, "co2": 0}
+        ]
+      },
+      "mark": {"type": "line", "color": "#1FD2FF", "clip": true},
+      "encoding": {"tooltip": null}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/UK_regression.csv"
+      },
+      "mark": {"type": "point"}
+    },
+    {
+      "data": {
+        "values": [{"percentage": 48, "co2": 9.5, "text": "R² = 0.71"}]
+      },
+      "mark": {"type": "text", "color": "black", "fontWeight": "bold"},
+      "encoding": {
+        "tooltip": null,
+        "text": {"field": "text", "type": "nominal"}
+      }
+    }
+  ]
+}
