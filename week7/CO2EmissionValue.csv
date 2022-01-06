@@ -1,10 +1,10 @@
-Technology,Description,CO2 Emission Value
-Hydroelectric,reservoir,4
-Wind,onshore,12
-Nuclear,various generation II reactor types,16
-Solar thermal,parabolic trough,22
-Geothermal,hot dry rock,45
-Solar PV,Polycrystalline silicon,46
-Biomass,various,230
-Natural gas,various combined cycle turbines without scrubbing,469
-Coal,various generator types without scrubbing,1001
+Technology,Description,CO2 Emission Value,cost
+Hydroelectric,reservoir,4,100
+Wind,onshore,12,40
+Nuclear,various generation II reactor types,16,50
+Solar thermal,parabolic trough,22,40
+Geothermal,hot dry rock,45,60
+Solar PV,Polycrystalline silicon,46,34
+Biomass,various,230,90
+Natural gas,various combined cycle turbines without scrubbing,469,95
+Coal,various generator types without scrubbing,1001,100
