@@ -1,0 +1,66 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/pls.csv"},
+    "title": {
+    "text": "UK CO2 emissions with causes of reductions",
+    "subtitle": ["UK Emissions and the cause of its reduction.", 
+    "Data: BEIS, Ourworldindata.org"],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "start",
+    "color": "black"
+  },
+  "transform": [
+    {
+  "calculate": "if(datum.type === 'co2_actual', 0, if(datum.type === 'difference', 1, 2))",
+    "as": "orderOfData"
+  }],
+  "width": 300,
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "Year",
+    "type": "temporal",
+    "title":"Year"}},
+  "layer": [
+    {
+      "encoding": {
+        "color": {
+          "field": "type", 
+          "type": "nominal",
+          "scale": {"scheme": "lightgreyteal"},
+          "legend":{
+            "orient":"top-left",
+            "title":null
+          }
+          },
+        "y": {
+          "field": "emissions",  "type": "quantitative",
+        "title":"Emissions (MtCO2)",
+        "scale": {"domain":[0,700]}
+        },
+      "order": {
+        "field": "orderOfData", 
+        "type": "quantitative"},
+      "opacity": {"value": 0.8},
+          
+          
+      "tooltip": [
+      {
+        "field": "Year", 
+        "type": "temporal", 
+        "title": "Date"
+        },
+      {
+        "field": "emissions",
+        "type": "quantitative",
+        "title": "emissions"
+      }
+    ]
+      },
+      "layer": [
+        {"mark": "area"}
+      ]
+    }
+  ]
+}
