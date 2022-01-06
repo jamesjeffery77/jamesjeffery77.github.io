@@ -1,10 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/pls.csv"},
-    "title": {
-    "text": "UK CO2 emissions with causes of reductions",
-    "subtitle": ["UK Emissions and the cause of its reduction.", 
-    "Data: BEIS, Ourworldindata.org"],
+  "description": "A chart which shows the effect of Renewables on UK CO2 emissions. Data sourced from: Wikipedia - https://en.wikipedia.org/wiki/Demography_of_the_United_Kingdom, World Bank - https://data.worldbank.org/indicator/EN.ATM.CO2E.KT?locations=GB, ourworldindata.org - https://ourworldindata.org/renewable-energy. I performed calculations on the data to estimate projections in the future, please see the colab file for more info ",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/Emission_Projection.csv"
+  },
+  "title": {
+    "text": ["The effect an increase in renewable electricity sources","has had on UK CO2 emissions"],
+    "subtitle":
+      "Data: ourworldindata.org, Wikipedia, World Bank",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 11,
     "anchor": "start",
@@ -12,55 +15,47 @@
   },
   "transform": [
     {
-  "calculate": "if(datum.type === 'co2_actual', 0, if(datum.type === 'difference', 1, 2))",
-    "as": "orderOfData"
-  }],
+      "calculate": "if(datum.type === 'Annual CO2 emissions', 0, if(datum.type === 'Other Effects', 1, 2))",
+      "as": "orderOfData"
+    }
+  ],
   "width": 300,
   "height": 300,
   "encoding": {
     "x": {
-      "field": "Year",
-    "type": "temporal",
-    "title":"Year"}},
+      "field": "Year", 
+      "type": "temporal", 
+      "title": "Year",
+      "axis": {"grid": true}
+      }
+      },
   "layer": [
     {
       "encoding": {
         "color": {
-          "field": "type", 
+          "field": "type",
           "type": "nominal",
           "scale": {"scheme": "lightgreyteal"},
-          "legend":{
-            "orient":"top-left",
-            "title":null
-          }
-          },
+          "legend": {
+            "orient": "top-left", "title": null}
+        },
         "y": {
-          "field": "emissions",  "type": "quantitative",
-        "title":"Emissions (MtCO2)",
-        "scale": {"domain":[0,700]}
+          "field": "emissions",
+          "type": "quantitative",
+          "axis": {"grid": false},
+          "title": "Emissions (MtCO2)",
+          "scale": {"domain": [0, 700]}
         },
-      "order": {
-        "field": "orderOfData", 
-        "type": "quantitative"},
-      "opacity": {"value": 0.8},
-          
-          
-      "tooltip": [
-      {
-        "field": "Year", 
-        "type": "temporal", 
-        "title": "Date"
-        },
-      {
-        "field": "emissions",
-        "type": "quantitative",
-        "title": "emissions"
-      }
-    ]
+        "order": {
+          "field": "orderOfData", "type": "quantitative"
+          },
+        "opacity": {"value": 0.5},
+        "tooltip": [
+          {"field": "Year", "type": "temporal", "title": "Date"},
+          {"field": "emissions", "type": "quantitative", "title": "emissions"}
+        ]
       },
-      "layer": [
-        {"mark": "area"}
-      ]
+      "layer": [{"mark": "area"}]
     }
   ]
 }
