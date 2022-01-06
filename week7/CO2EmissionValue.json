@@ -14,7 +14,7 @@
   },
   "mark": {"type": "bar", "color": "#86d0bb", "strokeWidth": 2, "opacity": 1},
   "height": 300,
-  "width": 250,
+  "width": 300,
   "layer":[
     {
       "mark": {
@@ -26,8 +26,9 @@
           "type":"quantitative",
           "title":"Cost ($KW)",
           "legend": {
-            "orient": "right", 
-            "type": "gradient"
+            "orient": "top-left", 
+            "type": "gradient",
+            "direction": "vertical"
             },
       "scale": {"scheme": "lightmulti"}
     }
@@ -40,7 +41,11 @@
       "field": "Technology",
      "type": "ordinal",
       "sort": [],
-      "title": null},
+      "title": null,
+      "axis": {
+        "labelAngle":330
+      }
+      },
     "y": {
       "field": "CO2 Emission Value",
       "type": "quantitative",
