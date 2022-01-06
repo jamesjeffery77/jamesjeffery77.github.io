@@ -1,10 +1,12 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Adding a slider to this choropleth map was the bane of my existence in this project. I was able to get a map showing data from a single year, but I struggled filtering this by year. Credit to 'wahab memon' on Stack Overflow who managed to point me in the right direction. The issue was that I had not provided the necessary fields in my lookup transform, and inverting my main and lookup data helped me bring all the years for my countries. I used the help I got on a European countries topojson to make a world map topojson, which had different keys and a different json structure. The underlying data is from Our World In Data, and the topojson is from deldersveld.     ",  
+  "description": "Adding a slider to this choropleth map was the bane of my existence in this project. I was able to get a map showing data from a single year, but I struggled filtering this by year. Credit to 'wahab memon' on Stack Overflow who managed to point me in the right direction. The issue was that I had not provided the necessary fields in my lookup transform, and inverting my main and lookup data helped me bring all the years for my countries. I used the help I got on a European countries topojson to make a world map topojson, which had different keys and a different json structure. The underlying data is from ourworldindata.org - https://ourworldindata.org/renewable-energy, and the topojson is from deldersveld.",
   "title": {
-    "text": ["Percentage of electricity generated from renewable","sources from 1985 to 2019"],
-    "subtitle": "Source: Our World in Data",
+    "text": [
+      "Percentage of electricity generated from renewable",
+      "sources between 1985 - 2019"
+    ],
+    "subtitle": "Source: ourworldindata.org",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
@@ -13,7 +15,7 @@
   "width": 300,
   "height": 300,
   "data": {
-    "url": "https://raw.githubusercontent.com//jamesjeffery77/jamesjeffery77.github.io/main/slider_worldmap_data.csv"
+    "url": "https://raw.githubusercontent.com//jamesjeffery77/jamesjeffery77.github.io/main/ShareElectricityRenewables.csv"
   },
   "transform": [
     {
@@ -27,7 +29,7 @@
         "fields": ["properties", "type", "geometry"]
       }
     },
-    {"filter": "datum.year==year"}
+    {"filter": "datum.Year==year"}
   ],
   "params": [
     {
