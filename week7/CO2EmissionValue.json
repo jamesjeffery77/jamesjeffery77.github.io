@@ -1,59 +1,68 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "SAS litter",
+  "description": "A chart which shows CO2 emissions emitted by each energy source per unit of electricity generated (KWH). The underlying CO2 emissions data is from the IPCC (Intergovernmental Panel on Climate Change), however this chart data was scraped from a wikipedia page which was scrapable - https://en.wikipedia.org/wiki/Emission_intensity. The cost per watt data is from - https://www.eia.gov/outlooks/aeo/assumptions/pdf/table_8.2.pdf  ",
   "title": {
-
-    "text": "50th Percentile CO2 Emission Value",
-
-    "subtitle": "CO2 emissions per unit of electricity generated (KWH). Source: Wikipedia.",
-
-    "subtitleFontStyle":"italic",
-
-    "subtitleFontSize":10,
-
+    "text": "Emissions and cost of various fuel sources",
+    "subtitle": ["CO2 emissions per unit of electricity generated (KWH) and"," overnight cost per watt ($KW)","Sources: Wikipedia, US Energy Information Administration ."],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
     "anchor": "start",
-
     "color": "black"
- },
-
-  "data": {"url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/week7/CO2EmissionValue.csv"},
-  "mark":{
-
- 
-
-      "type": "bar",
-
-      "color": "#86d0bb",
-
-      "strokeWidth":2,
-
-      "opacity":1
-
- 
-
-    },
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/week7/CO2EmissionValue.csv"
+  },
+  "mark": {"type": "bar", "color": "#86d0bb", "strokeWidth": 2, "opacity": 1},
   "height": 300,
   "width": 250,
-
-  "encoding": {
-    "y": {"field": "Technology", "type": "ordinal", "sort":[], "title": null},
-
-
-
-
-    "x": {"field": "CO2 Emission Value", "type": "quantitative", "title": "CO2 (equivalent) / KWH"},
-
-        "tooltip": [
-
-      {"field": "CO2 Emission Value", "type": "quantitative", "title": "CO2 Emission Value"},
-      {"field": "Description", "type": "nominal", "title": "Description of Technology"}
-   
-
-    ]
-
- 
-
+  "layer":[
+    {
+      "mark": {
+        "type":"bar"
+      },
+      "encoding":{
+        "color": {
+          "field": "cost",
+          "type":"quantitative",
+          "title":"Cost ($KW)",
+          "legend": {
+            "orient": "right", 
+            "type": "gradient"
+            },
+      "scale": {"scheme": "lightmulti"}
     }
-
-
+      }
+    }
+  ],
+  
+  "encoding": {
+    "x": {
+      "field": "Technology",
+     "type": "ordinal",
+      "sort": [],
+      "title": null},
+    "y": {
+      "field": "CO2 Emission Value",
+      "type": "quantitative",
+      "title": "CO2 (equivalent) / KWH"
+    },
+    
+    "tooltip": [
+      {
+        "field": "CO2 Emission Value",
+        "type": "quantitative",
+        "title": "CO2 Emissions"
+      },
+      {
+        "field": "Description",
+        "type": "nominal",
+        "title": "Description of Technology"
+      },
+      {
+        "field": "cost",
+        "type": "nominal",
+        "title": "Overnight Cost ($KW)"
+      }
+    ]
+  }
 }
