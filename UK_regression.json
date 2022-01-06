@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "This is a regression of the percentage of electricity generated from renewable energy on CO2 emissions per capita in the UK from 1985 - 2018. I chose to stop at 2018 because this was before Covid, which I feel might have influenced the results due to lower emissions in general. I performed the regression in python to determine the equaition of the regression line",
+  "description": "This is a regression of the percentage of electricity generated from renewable energy on CO2 emissions per capita in the UK from 1985 - 2018. I chose to stop at 2018 because this was before Covid, which I feel might have influenced the results due to lower emissions in general. I performed the regression in python to determine the equaition of the regression line. World Bank data found here - https://data.worldbank.org/indicator/EN.ATM.CO2E.PC?locations=GB. ourworldindata.org data found here - https://ourworldindata.org/renewable-energy",
   "title": {
     "text": [
       "Regression of carbon intensity of electricity on CO2 ",
