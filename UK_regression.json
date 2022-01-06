@@ -29,14 +29,14 @@
       "type": "quantitative",
       "title": "CO2 emissions per capita",
       "axis": {"grid": true},
-      "scale": {"domain": [4, 11]}
+      "scale": {"domain": [5, 11]}
     },
     "y": {
       "field": "percentage",
       "type": "quantitative",
       "title": "Electricity generated from renewable sources (%)",
       "axis": {"grid": true},
-      "scale": {"domain": [15, 55]}
+      "scale": {"domain": [-5, 35]}
     },
     "tooltip": [
       {"field": "year", "type": "temporal", "title": "Year"},
@@ -52,8 +52,8 @@
     {
       "data": {
         "values": [
-          {"percentage": 0, "co2": 14.1},
-          {"percentage": 72.07, "co2": 0}
+          {"percentage": -5, "co2": 10.57},
+          {"percentage": 56.86, "co2": 0}
         ]
       },
       "mark": {"type": "line", "color": "#1FD2FF", "clip": true},
@@ -66,7 +66,7 @@
       "mark": {"type": "point"}
     },
     {
-      "data": {"values": [{"percentage": 48, "co2": 9.5, "text": "R² = 0.71"}]},
+      "data": {"values": [{"percentage": 27, "co2": 9.5, "text": "R² = 0.88"}]},
       "mark": {"type": "text", "color": "black", "fontWeight": "bold"},
       "encoding": {
         "tooltip": null,
