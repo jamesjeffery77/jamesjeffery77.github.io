@@ -9,6 +9,7 @@
   },
 "height": 300,
 "width": 250,
+"background":null,
 "data": {
   "values": [
     {"Type": "Mammals", "Value":"1323", "Category":"Vertebrate"},
