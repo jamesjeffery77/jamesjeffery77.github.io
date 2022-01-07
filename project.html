@@ -20,10 +20,14 @@
 </style>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 </style>
 
-<!-- Meta-->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;700&display=swap');
+</style>    
+
+<!-- Meta stuff-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
@@ -36,7 +40,7 @@
 
 <body>
 
-    <div class="container">
+    <div class="header">
         <h2><span style="color:rgb(255, 255, 255)">Data</span><span style="color:rgb(31, 210, 255)">Science</span></h2>
     </div>
 
@@ -45,7 +49,24 @@
         <button class="button5" onclick="location.href = 'https://github.com/jamesjeffery77/jamesjeffery77.github.io'">GitHub</button>
     </div>
 
-    <h4> Chart 1 - Info on different energy sources test</h4>
+    <div class="containertext">
+        <h3> An overview of carbon intensity in the UK </h3>
+    </div>
+
+
+    <div class="containertext">
+        <h4> Project Aims</h4>
+    </div>
+
+    <div class="containertext">
+        <p> We need electricity. We also need clean air to breathe. Unfortunately, electricity generation has historically been primarily generated from fossil fuels, resulting in trillions of tonnes of CO2 in our atmosphere. This is the carbon intensity of electricity – the amount of CO2 produced per unit of electricity generated. In an attempt to minimize this, most nations have made serious efforts to adopt renewable technologies to ‘decarbonize’ their electricity mix. This project aims to give an overview of the causes behind this decision, the impacts of this, and ways in which this can be improved.  </p>
+   </div>
+
+    <div class="containertext">
+        <h4> Background</h4>
+    </div>
+   
+        <div class="containertext">
     <div class="container">
         
         <!--chart1 - data was scraped from wikipedia-->
@@ -57,16 +78,11 @@
         </div>
     </div>
 
-
     <div class="containertext">
-         <p> This chart shows CO2 emissions per unit of electricity.
-         Clearly, there is an incentive to pursue policies that reduces 
-        the use of carbon intensive electricity sources. The underlying data was scraped 
-         <a href="https://colab.research.google.com/drive/16aHZkh8x-naBla_2HpbDb4iCDnaBD0Bn?usp=sharing"> here</a></p>
+         <p> This chart highlights the rationale behind this movement towards renewable energy. It shows the relative CO2 emissions per KWH for common fuel sources alongside a colour-coded scale highlighting their average overnight cost per KW. The underlying CO2 emission data was scraped from wikipedia 
+         <a href="https://colab.research.google.com/drive/16aHZkh8x-naBla_2HpbDb4iCDnaBD0Bn?usp=sharing"> here</a> since it was in an easier-to-scrape format than the underlying paper (PDF). The cost data was split between two webpages, which I manually added to the dataframe.</p>
     </div>
 
-    
-    <h4> Chart 2 - How have UK electricity sources changed over time?  </h4>
     <div class="container">
         <!--chart2 - data found from worldindata.org-->
         <div class="chart" id="chart2">
@@ -79,13 +95,9 @@
 
 
     <div class="containertext">
-    <p> We can see a significant shift in the sources of electricity in the UK from 1985.
-         In 1985, x% was generated using non-renewable, currently, it is 59.3%. Data cleaned
-        <a href="https://colab.research.google.com/drive/1zm4tzELSEP1y8Su3Jd9GcY8SlOpttnZB?usp=sharing"> here </a> </p>
+    <p> This chart shows how the electricity mix in the UK has changed over time, highlighting the UK's progress. The underlying data was accessed <a href="https://ourworldindata.org/electricity-mix"> here </a> and was cleaned <a href="https://colab.research.google.com/drive/1zm4tzELSEP1y8Su3Jd9GcY8SlOpttnZB?usp=sharing"> here </a>. The cleaning process involved filtering out data from unwanted countries,  and switching the data from wide to long format which could be read by vega-lite. This data can be replicated for any country within this dataset if you input its country code in the script.</p>
     </div>
 
-
-    <h4> Chart 3 - How do the UK's electricity sources compare to the rest of the world? </h4>
     <div class="container">
       <!--chart3 - data found from worldindata.org-->
         <div class="chart" id="chart3">
@@ -97,13 +109,25 @@
     </div>
 
     <div class="containertext">
-    <p> This map illustrates a global trend towards more sustainable electricity sources.
-        Sub-saharan Africa and South America has remained fairly constantly reliant on renewable energy sources for
-    its electricity, whilst Europe and Asia have made significant progress since 1985. 
-        Data cleaned <a href="https://colab.research.google.com/drive/1lJEu4UEeYKpb5ncgoBZZjZlXDc3TAVW-?usp=sharing"> here </a></p>
+    <p> This chart depicts the same information from the previous chart for each country in this map, with a slider highlighting the data for each year. It highlights the general worldwide movement towards a renewable energy mix, and uses the same raw data as chart two. The <a href="https://colab.research.google.com/drive/1lJEu4UEeYKpb5ncgoBZZjZlXDc3TAVW-?usp=sharing"> cleaning </a> process involved manually changing some country names in the data to match the topojson country names (i.e US to USA). I joined the data directly in Vega, where I performed a lookup transform on the fields I wanted in my final data, and filtered by year to create the slider. Data from most of Africa was only available from 2000. Sub-saharan Africa has very green electricity mix, I assume because their electriciy demand is significantly lower than in more developed countries.</p>
     </div>
 
-    <h4> Chart 4 - Is there any correlation between more sustainable electricity and CO2 emissions per capita in the UK? </h4>
+    <h4> The impact of a reduction in carbon intensity </h4>
+    
+    <div class="container">
+        <!--chart4 - regression was performed in python, data sourced from the World Bank and OurWorldInData-->
+        <div class="chart" id="chart4">
+            <script>
+                var myChart4 = "UK_regression.json";
+                vegaEmbed('#chart4', myChart4);
+            </script>
+        </div>
+    </div>
+
+    <div class="containertext">
+        <p> First I have regressed the percentage of electricity generated by renewables on air quality in the top 50 countries by GDP. We can see evidence of a negative correlation between the concentration of fine particle matter in the air and that country's relative carbon intensity. The underlying air quality<a href="https://www.who.int/data/gho/data/indicators/indicator-details/GHO/concentrations-of-fine-particulate-matter-(pm2-5)"> data </a> is from the WHO and the carbon intensity data is the same as before. The<a href="https://colab.research.google.com/drive/1cUk_4k3Z0YUN7Cy4X9QnGYCOtAeAXNeW?usp=sharing"> cleaning </a> process involved filtering out unwanted data, scraping the top 50 countries, and merging the two dataframes</p>
+    </div>
+
     <div class="container">
         <!--chart4 - regression was performed in python, data sourced from the World Bank and OurWorldInData-->
         <div class="chart" id="chart4">
@@ -121,8 +145,6 @@
        <a href="https://colab.research.google.com/drive/1qqItkPgBbo1VeAcfCsNuZBVu346cPgIE?usp=sharing"> here </a> </p>
     </div>
 
-
-    <h4> Chart 5 - How has cleaner electricity generation impacted the UK? </h4>
     <div class="container">
         <!--chart5 - data from BEIS and OurWorldInData-->
         <div class="chart" id="chart5">
@@ -135,19 +157,17 @@
 
     <div class="containertext">
     <p> This chart shows how emissions have changed in the UK since 1985. The
-    blue wedge shows the fall in emissions seen by the UK, a fall of 31%. To identfy
+    green wedge shows the fall in emissions seen by the UK, a fall of 31%. To identfy
     how much of this can be attributed to a greener electricity mix, I have calculated
         what emissions would have been if they grew at a steady rate alongside the 
         population, keeping the percentage of electricity generated by renewables fixed
         at the 1985 percentage. The red triangle shows the reduction in emissions that
-        can be attributed to an increase in renewable energy, and the orange section shows all
-        other factors (i.e the reduction in energy production and consumption). Its 
+        can be attributed to an increase in renewable energy, and the orange section shows all other factors (i.e the reduction in energy production and consumption). Its 
         effect is only really seen from 2010 onwards. In 2018, roughly 31% of the reduction
-        in emissions could be attributed to greener electricity production. Data was cleaned and
-        projection was performed <a href="https://colab.research.google.com/drive/1HO5DBj1ahQVeElNJRln8o-ZMsMLFQa-s?usp=sharing"> here </a> </p>
+        in emissions could be attributed to greener electricity production. Data was cleaned and projection was performed <a href="https://colab.research.google.com/drive/1HO5DBj1ahQVeElNJRln8o-ZMsMLFQa-s?usp=sharing"> here </a> </p>
     </div>
     
-    <h4> Chart 6 - How can we improve our carbon intensity easily? </h4>
+    <h4> An easy way to help</h4>
     <div class="container">
         <!--chart6 - API from carbonintensity.org.uk-->
         <div class="chart" id="chart6">
@@ -157,6 +177,12 @@
             </script>
         </div>
     </div>
+
+    <div class="containertext">
+        <p> This chart shows an API developed by <a href="https://carbonintensity.org.uk/"> carbonintensity.org. </a> who have developed a machine learning tool that predicts the carbon intensity of the national grid. We are currently unable to store electricity in large quantities; as a wind turbine spins it generates electricity, but when it stops, the flow does too. When demand for electricity outstrips the amount being produced renewably, then the National Grid has to use other energy which can be stored (fossil fuels) to match this demand. By using electricity at times when demand is low, then we can reduce the amount of fossil fuels needed to supplement electricity generation. We can see regular dips in the carbon intensity during the night, if we use electricity then, we are doing our bit easily! Given that this is an API, there was no need to clean the data and it can be easily replicated.  </p>
+    </div>
+    <h4> Conclusions</h4>
+    <p> Improving carbon intensity is an important goal with numerous beneficial effects on the UK. Further work can be done to use the carbon intensity API with specific companies / institutions to identify when might be a good time to run electricity intensive processes. </p>
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
 
