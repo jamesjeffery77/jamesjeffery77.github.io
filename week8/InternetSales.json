@@ -33,7 +33,8 @@
 
     },
   "height": 300,
-  "width": 300,
+  "width": 290,
+  "background":null,
 
   "encoding": {
     "y": {"field": "Internet sales as a percentage of total retail sales (ratio) (%)", "type": "quantitative", "title": null},
