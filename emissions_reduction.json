@@ -35,7 +35,7 @@
         "color": {
           "field": "type",
           "type": "nominal",
-          "scale": {"scheme": "lightgreyteal"},
+          "scale": {"scheme": "sinebow"},
           "legend": {
             "orient": "top-left", "title": null}
         },
