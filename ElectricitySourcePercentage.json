@@ -14,7 +14,7 @@
     "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/ElectricitySourcePercentage.csv"
   },
   "height": 300,
-  "width": 300,
+  "width": 290,
   "mark": "line",
   "selection": {
     "Type": {
