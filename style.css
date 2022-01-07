@@ -45,13 +45,11 @@ p{
 
 .containertext{
     align-items: center;
-    border: #1FD2FF solid 5px;
 }
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: #1FD2FF solid 5px;
     text-align: center;
     width: auto;
     height: auto;
