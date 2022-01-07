@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     
     "title": {
-      "text": "Covid Deaths by Region",
-      "subtitle":"Raw data",
+      "text": "New Covid Cases by region",
+      "subtitle":"raw data on GitHub",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
@@ -11,7 +11,7 @@
     },
     
      "data": {
-      "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/covidDeathsByRegion.csv",
+      "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/week2/ltla_2022-01-07.csv",
       "format": {"type": "csv"}
     },
   
@@ -19,7 +19,7 @@
         
         {"filter": {
           "field": "areaName", 
-          "oneOf": ["Bristol, City of", "Bolton", "Glasgow City"]}
+          "oneOf": ["Trafford", "Bolton", "East Dunbartonshire"]}
           }
   
   
@@ -42,7 +42,7 @@
       },
   
       "y": {
-        "field": "cumCasesBySpecimenDate",
+        "field": "newCasesBySpecimenDate",
         "type": "quantitative",
         "title": null,
         "axis": {"grid": false}
@@ -52,7 +52,7 @@
         "field": "areaName",
         "type": "nominal",
         "scale": {"scheme": "set1"},
-        "title": "Regions",
+        "title": "LEGEND TITLE",
         "legend": {
           "orient": "top-left", 
           "fillColor": null}
