@@ -14,7 +14,7 @@
     "url": "https://api.carbonintensity.org.uk/intensity/2022-01-01T12:00Z/2022-01-20T12:00Z",
     "format": {"property": "data"}
   },
-  "width": 300,
+  "width": 280,
   "height": 300,
   "layer": [
     {
