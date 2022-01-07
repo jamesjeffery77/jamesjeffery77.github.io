@@ -55,7 +55,7 @@
         "title": "Regions",
         "legend": {
           "orient": "top-left", 
-          "fillColor": "#FcFdFd"}
+          "fillColor": null}
       }
   }
   }
