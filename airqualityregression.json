@@ -18,7 +18,7 @@
     "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/airquality_regression.csv",
     "format": {"type": "csv"}
   },
-  "background": "#ffffff",
+  "background": null,
   "config": {"axis": {"grid": true}},
   "height": 300,
   "width": 290,
@@ -41,7 +41,16 @@
       "color": {
       "field": "ParentLocation",
       "type": "nominal",
-      "scale": {"scheme": "tableau20"
+      "scale": {
+        "range": [
+          "#bf8040",
+          "#add8e3",
+          "#00bfff",
+          "#ffdead",
+          "#ad9ea5",
+          "#627f8c",
+          "#263409"
+        ]
       },
       "title": null,
       "legend": {
