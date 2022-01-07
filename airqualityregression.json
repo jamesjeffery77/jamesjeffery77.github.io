@@ -1,0 +1,101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Data for concentration of fine particulate matter - https://www.who.int/data/gho/data/indicators/indicator-details/GHO/concentrations-of-fine-particulate-matter-(pm2-5)",
+  "title": {
+    "text": [
+      "Regression of carbon intensity of electricity on air ",
+      "quality in the top 50 countries by GDP in 2016"
+    ],
+    "subtitle": 
+      "Sources: Our World in Data (carbon intensity), WHO (air pollution)"
+    ,
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/airquality_regression.csv",
+    "format": {"type": "csv"}
+  },
+  "background": "#ffffff",
+  "config": {"axis": {"grid": true}},
+  "height": 300,
+  "width": 290,
+  "mark":"point",
+  "encoding": {
+    "x": {
+      "field": "FactValueNumeric",
+      "type": "quantitative",
+      "title": "Concentration of fine particulate matter in air (PM2.5)",
+      "axis": {"grid": true},
+      "scale": {"domain": [0, 80]}
+    },
+    "y": {
+      "field": "percentage",
+      "type": "quantitative",
+      "title": "Electricity generated from renewable sources (%)",
+      "axis": {"grid": true},
+      "scale": {"domain": [-5, 100]}
+    },
+      "color": {
+      "field": "ParentLocation",
+      "type": "nominal",
+      "scale": {"scheme": "tableau20"
+      },
+      "title": null,
+      "legend": {
+        "orient": "bottom", 
+          "title": null,
+          "columns" : 2
+ }
+    },
+    "tooltip": [
+      {
+        "field": "country", 
+        "type": "nominal", 
+        "title": "country"
+        },
+      {
+        "field": "percentage", 
+        "type": "quantitative","title": "Percentage"
+        },
+        {
+        "field": "FactValueNumeric", 
+        "type": "quantitative", 
+        "title": "Air pollution"
+        },
+      {
+        "field": "ParentLocation",
+        "type": "nominal",
+        "title": "Location"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {"FactValueNumeric": 0, "percentage": 46.98},
+          {"FactValueNumeric": 85.21, "percentage": -5}
+        ]
+      },
+      "mark": {"type": "line", "color": "#1FD2FF", "clip": true},
+      "encoding": {"tooltip": null}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/airquality_regression.csv"
+      },
+      "mark": {"type": "point"}
+    },
+    {
+      "data": {"values": [{"percentage": 77, "FactValueNumeric": 65, "text": "R² = 0.22"}]},
+      "mark": {"type": "text", "color": "black", "fontWeight": "bold"},
+      "encoding": {
+        "tooltip": null,
+        "text": {"field": "text", "type": "nominal"}
+      }
+    }
+  ]
+}
