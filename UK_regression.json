@@ -22,7 +22,7 @@
   "background": "#ffffff",
   "config": {"axis": {"grid": true}},
   "height": 300,
-  "width": 280,
+  "width": 290,
   "encoding": {
     "x": {
       "field": "co2",
