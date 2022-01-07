@@ -21,6 +21,7 @@
   ],
   "width": 280,
   "height": 300,
+  "background": null,
   "encoding": {
     "x": {
       "field": "Year", 
@@ -35,7 +36,13 @@
         "color": {
           "field": "type",
           "type": "nominal",
-          "scale": {"scheme": "sinebow"},
+          "scale": {
+            "range": [
+              "#dfff80",
+              "#80ffff",
+              "#5f6bab"
+            ]
+          },
           "legend": {
             "orient": "top-left", "title": null}
         },
