@@ -19,7 +19,7 @@
     "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/UK_regression.csv",
     "format": {"type": "csv"}
   },
-  "background": "#ffffff",
+  "background": null,
   "config": {"axis": {"grid": true}},
   "height": 300,
   "width": 290,
@@ -56,14 +56,14 @@
           {"percentage": 56.86, "co2": 0}
         ]
       },
-      "mark": {"type": "line", "color": "#1FD2FF", "clip": true},
+      "mark": {"type": "line", "color": "#bf8040", "clip": true},
       "encoding": {"tooltip": null}
     },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/jamesjeffery77/jamesjeffery77.github.io/main/UK_regression.csv"
       },
-      "mark": {"type": "point"}
+      "mark": {"type": "point","color":"#5f6bab"}
     },
     {
       "data": {"values": [{"percentage": 27, "co2": 9.5, "text": "R² = 0.88"}]},
