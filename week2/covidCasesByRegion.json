@@ -55,7 +55,7 @@
         "title": "LEGEND TITLE",
         "legend": {
           "orient": "top-left", 
-          "fillColor": "#FcFdFd"}
+          "fillColor": null}
       }
   }
   }
