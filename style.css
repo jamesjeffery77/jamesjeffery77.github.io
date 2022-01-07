@@ -6,7 +6,7 @@ body {
   }
 
 h1{
-    font-family: 'Roboto', monospace;
+    font-family: 'Arial', monospace;
     font-weight: bold;
     font-size: 120px;
 }
@@ -18,20 +18,22 @@ h2{
 }
 
 h3{
-    font-family: 'Roboto', monospace;
+    font-family: 'Arial', monospace;
     font-weight: bold;
     color: white;
     font-size: 30px; 
 }
 
 h4{
-    font-family: 'Roboto', monospace;
+    font-family: 'Arial', monospace;
     color: white;
-    font-size: 15px; 
+    font-size: 20px; 
 }
 
 p{
+    font-family: 'Arial', monospace;
     color: white;
+    font-size: 15px; 
 }
 
 
@@ -55,6 +57,13 @@ p{
     width: auto;
     height: auto;
     padding: 0px 0px 0px 0px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    border: #908e8e solid 5px;
 }
 
 .chart {
