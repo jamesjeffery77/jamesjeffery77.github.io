@@ -15,6 +15,13 @@
   "width": 280,
   "height": 300,
   "background": null,
+   "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  },
   "data": {
     "url": "https://raw.githubusercontent.com//jamesjeffery77/jamesjeffery77.github.io/main/ShareElectricityRenewables.csv"
   },
