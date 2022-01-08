@@ -19,8 +19,15 @@
       "as": "orderOfData"
     }
   ],
-  "width": 280,
+  "width": 290,
   "height": 300,
+   "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  },
   "background": null,
   "encoding": {
     "x": {
