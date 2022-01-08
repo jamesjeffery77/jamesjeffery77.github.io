@@ -50,7 +50,7 @@
     </div>
 
     <div class="containertext">
-        <h3> An overview of carbon intensity in the UK </h3>
+        <h3> Should we care about reducing the carbon intensity of electricity? </h3>
     </div>
 
 
@@ -168,21 +168,89 @@
     </div>
     
     <h4> An easy way to help</h4>
-    <div class="container">
-        <!--chart7 - API from carbonintensity.org.uk-->
-        <div class="chart" id="chart7">
-            <script>
-                var myChart7 = "carbonIntensityAPI.json";
-                vegaEmbed('#chart7', myChart7);
-            </script>
-        </div>
-    </div>
+    <div class="chart" id="firstChart"></div>
+    <!-- to fetch info between dates, the api had this url https://api.carbonintensity.org.uk/intensity/YYYY-MM-DDT12:00Z(firstdate)/seconddate, 
+which meant it wouldn't autoupdate-->
+    <!--I wanted to autoupdate the api dates for two days before and after todays date in vega, but since the api would only fetch data for manually inputted dates, 
+ I did it in javascript instead.-->
+    <!--var url inputs todays date - 2 days (had to convert to miliseconds), then added 'T12:00Z' so it would be compatible with the API, 
+and then plus two days (same method), and appends this to the base url-->
+    <!--Then input that url into the vega data. Thanks to denes who helped make a version (dynamic_embed.html) which I changed to suit my needs better-->
+<script>
+    var url = 'https://api.carbonintensity.org.uk/intensity/' + new Date(Date.now()- 2 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10) + 'T12:00Z/' + new Date(Date.now() + 2 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10) + 'T12:00Z';
+    console.log(url)
+
+    var spec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+   "description": "An API which shows actual carbon intensity of the UK National Grid compared to their forecast. Date autoupdating in javascript",
+  "title": {
+    "text": "Carbon Intensity in the UK",
+    "subtitle": [
+      "A forecast of future carbon intensity mapped onto past values.",
+      "API from carbonintensity.org.uk"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": url,
+    "format": {"property": "data"}
+  },
+  "width": 290,
+  "height": 300,
+    "background": null,
+  "config": {"style": {"cell": {"stroke": "transparent"}}},
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "fill": "crimson",
+        "color": "crimson",
+        "size": 2
+      },
+      "encoding": {
+        "x": {"field": "to", 
+        "type": "temporal",
+        "scale": {"type": "utc"},
+        "axis": {"format": "%b %e"}
+        },
+        "y": {
+          "field": "intensity.actual", "type": "quantitative",
+                    "title": "Carbon Intensity"
+          }
+      }
+    },
+    {
+      "mark": {
+        "type": "line", 
+      "color": "#1fd2ff",
+      "opacity" :"0.7"
+      },
+      "encoding": {
+        "x": {
+          "field": "to", 
+          "type": "temporal",
+          "title":null},
+        "y": {
+          "field": "intensity.forecast", "type": "quantitative"
+          }
+      }
+    }
+  ]
+}
+    vegaEmbed('#firstChart', spec)
+</script>
 
     <div class="containertext">
         <p> This chart shows an API developed by <a href="https://carbonintensity.org.uk/"> carbonintensity.org. </a> who have developed a machine learning tool that predicts the carbon intensity of the national grid. We are currently unable to store electricity in large quantities; as a wind turbine spins it generates electricity, but when it stops, the flow does too. When demand for electricity outstrips the amount being produced renewably, then the National Grid has to use other energy which can be stored (fossil fuels) to match this demand. By using electricity at times when demand is low, then we can reduce the amount of fossil fuels needed to supplement electricity generation. We can see regular dips in the carbon intensity during the night, if we use electricity then, we are doing our bit easily! Given that this is an API, there was no need to clean the data and it can be easily replicated.  </p>
     </div>
     <h4> Conclusions</h4>
     <p> Improving carbon intensity is an important goal with numerous beneficial effects on the UK. Further work can be done to use the carbon intensity API with specific companies / institutions to identify when might be a good time to run electricity intensive processes. </p>
+
+
+
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
 
