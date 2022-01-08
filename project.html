@@ -62,8 +62,8 @@
     </div>
 
     <div class="containertext">
-        <p> We need electricity. We also need clean air to breathe. Unfortunately, electricity has historically been 
-            generated primarily from fossil fuels, resulting in trillions of tonnes of CO2 in our atmosphere; the amount of CO2 
+        <p> We need electricity. We also need clean air to breathe. Electricity has historically been 
+            generated primarily from fossil fuels, resulting in trillions of tonnes of CO2 in our atmosphere - the amount of CO2 
             produced per unit of electricity generated is its ‘carbon intensity’. To minimize this, most nations have made 
             serious efforts to adopt renewable technologies to ‘decarbonize’ their electricity. This project aims to provide a 
             background to carbon intensity, the impacts a reduction might have, and a way we can all help.              
@@ -89,8 +89,9 @@
     </div>
 
     <div class="containertext">
-         <p> The rationale behind this movement is evident; renewable energy sources emit minimal CO2, 
-             and are generally rather cheap. The underlying CO2 emission <a href="https://en.wikipedia.org/wiki/Emission_intensity"> data</a> 
+         <p> As highlighted above, renewable energy sources emit minimal CO2, and are generally rather cheap, 
+             providing strong rationale for a movement towards more sustainable electricity. 
+             The underlying CO2 emission <a href="https://en.wikipedia.org/wiki/Emission_intensity"> data</a> 
              and cost <a href="https://www.eia.gov/outlooks/aeo/assumptions/pdf/table_8.2.pdf"> data</a> was 
              scraped<a href="https://colab.research.google.com/drive/16aHZkh8x-naBla_2HpbDb4iCDnaBD0Bn?usp=sharing"> here</a>. </p>
     </div>
@@ -108,7 +109,7 @@
 
 
     <div class="containertext">
-    <p> The UK has made significant process moving towards renewable electricity generation. The underlying CarbonBrief  
+    <p> Since 1985, the UK has made significant process adopting more renewable electricity sources. The underlying CarbonBrief  
         <a href="https://ourworldindata.org/electricity-mix"> data </a>  was cleaned 
         <a href="https://colab.research.google.com/drive/1zm4tzELSEP1y8Su3Jd9GcY8SlOpttnZB?usp=sharing"> here </a>. 
         The cleaning process involved filtering the data and stacking and unstacking the dataframe around an index of three 
@@ -128,10 +129,10 @@
     </div>
 
     <div class="containertext">
-    <p> We can see that the UK’s reduction in carbon intensity since 1985 is mirrored by other 
+    <p> We can see that the UK’s reduction in carbon intensity since 1985 has been mirrored by other 
         countries around the world. The <a href="https://colab.research.google.com/drive/1lJEu4UEeYKpb5ncgoBZZjZlXDc3TAVW-?usp=sharing"> 
-        cleaning </a> process involved manually changing some names in the data to match the topojson country names (i.e US to USA). 
-        I joined the data directly in Vega. When adding the slider to filter by year, initially it had no effect, and would 
+        cleaning </a> process involved manually changing names in my data to match the topojson country names (i.e US to USA) and performing
+        a data join in Vega. When adding the slider to filter by year, initially it had no effect, and would 
         only show data from one year. I was able to overcome this by changing the lookup transform to include fields I wanted, 
         and by inverting the main (csv) and lookup (topojson) data.</p>
     </div>
