@@ -23,6 +23,13 @@
   "config": {"axis": {"grid": true}},
   "height": 300,
   "width": 290,
+   "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  },
   "encoding": {
     "x": {
       "field": "co2",
