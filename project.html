@@ -211,10 +211,12 @@
     <div class="chart" id="firstChart"></div>
     <!-- to fetch info between dates, the api had this url 
 https://api.carbonintensity.org.uk/intensity/firstdate/seconddate, which meant it wouldn't autoupdate-->
-    <!--I wanted to autoupdate the api dates in vega since the api would only 
-fetch data for manually inputted dates, which I did in javascript.-->
-    <!--inputs todays date - 2 days (had to convert to miliseconds), 
-then added 'T12:00Z' so it would be compatible with the API, and then plus two days (same method)-->
+    <!-- For example - https://api.carbonintensity.org.uk/intensity/2017-09-18T12:00Z/2017-10-01T12:00Z-->
+    <!--I was unable autoupdate the api dates in vega since the api would only 
+fetch data for manually inputted dates, So I hacked it in javascript instead.-->
+    <!-- the var url inputs todays date minus 2 days (had to convert to miliseconds), 
+then added 'T12:00Z' so it would be compatible with the API, and then plus two days (same method), and adds it
+to the url-->
     <!--Then input that url into the vega data. Thanks to denes who 
 helped make a version (dynamic_embed.html) which I changed to suit my needs better-->
 <script>
